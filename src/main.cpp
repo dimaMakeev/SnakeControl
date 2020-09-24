@@ -23,10 +23,20 @@ void loop() {
   Yval = analogRead(Ypin);
   Sval = analogRead(Spin);
   delay(200);
+if (Xval > 610)
+Serial.println("-1,0");
+if (Xval < 450)
+Serial.println("1,0");
+if (Yval > 610)
+Serial.println("0,1");
+if (Yval < 450)
+Serial.println("0,-1");
+
+/*
 Serial.print("X Value = ");
 Serial.print(Xval);
 Serial.print(" Y Value = ");
 Serial.print(Yval);
 Serial.print(" Switch Value = ");
-Serial.println(Sval);
+Serial.println(Sval);*/
 }
